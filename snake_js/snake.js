@@ -51,16 +51,16 @@ document.addEventListener("keydown", direction);
 
 function direction(event) {
 	let key = event.keyCode;
-	if(key == 37 && d != "RIGHT") {
+	if((key == 37 || key == 65) && d != "RIGHT") {
 		left.play();
 		d = "LEFT";
-	} else if(key == 38 && d != "DOWN") {
+	} else if((key == 38 || key == 87) && d != "DOWN") {
 		up.play();
 		d = "UP";
-	} else if(key == 39 && d != "LEFT") {
+	} else if((key == 39 || key == 68) && d != "LEFT") {
 		right.play();
 		d = "RIGHT";
-	} else if(key == 40 && d != "UP") {
+	} else if((key == 40 || key == 83) && d != "UP") {
 		down.play();
 		d = "DOWN";
 	}
